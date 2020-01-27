@@ -132,12 +132,12 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.581479" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Pocket_Pantry\Pocket_Pantry.csproj">
-      <Project>{DDC86971-7E5C-457D-91CE-B5858E62692D}</Project>
+      <Project>{20B6D874-CAB3-422D-BD89-D293536D352C}</Project>
       <Name>Pocket_Pantry</Name>
     </ProjectReference>
   </ItemGroup>
