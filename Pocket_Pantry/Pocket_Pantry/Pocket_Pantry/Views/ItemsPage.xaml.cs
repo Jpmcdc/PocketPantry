@@ -42,12 +42,21 @@ namespace Pocket_Pantry.Views
             await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
         }
 
+        async void DeleteItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
+        }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
 
             if (viewModel.Items.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
+        }
+
+        void ToolbarItem_Clicked(System.Object sender, System.EventArgs e)
+        {
         }
     }
 }
