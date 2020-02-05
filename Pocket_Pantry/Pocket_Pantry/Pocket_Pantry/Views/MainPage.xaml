@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <!-- This xaml file is for the bottom menu -->
-<!-- The only itmes that should be in the menu are "Recipes" and "Pantry" -->
-<!-- TODO: change icons to somthing nicer -->
+<!-- The only times that should be in the menu are "Recipes" and "Pantry" -->
+<!-- TODO: change icons to something nicer -->
 
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
