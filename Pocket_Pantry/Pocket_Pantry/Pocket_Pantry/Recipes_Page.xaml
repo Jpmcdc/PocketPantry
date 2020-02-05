@@ -7,8 +7,12 @@
     <ContentPage.Content>
 
         <Grid BackgroundColor="AliceBlue" >
+            
 
-           <ListView ItemsSource=""><ListView.ItemTemplate><DataTemplate></DataTemplate></ListView.ItemTemplate></ListView>
+           <ListView ItemsSource="" Margin="-18,60,0,0"><ListView.ItemTemplate><DataTemplate></DataTemplate></ListView.ItemTemplate></ListView>
+
+           <Button Text="Add" Margin="250,-490,0,0"/>
+           
 
 
         </Grid>
