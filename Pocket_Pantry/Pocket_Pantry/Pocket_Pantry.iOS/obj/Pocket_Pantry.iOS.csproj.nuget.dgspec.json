@@ -1,0 +1,119 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry.iOS/Pocket_Pantry.iOS.csproj": {}
+  },
+  "projects": {
+    "/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry.iOS/Pocket_Pantry.iOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry.iOS/Pocket_Pantry.iOS.csproj",
+        "projectName": "Pocket_Pantry.iOS",
+        "projectPath": "/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry.iOS/Pocket_Pantry.iOS.csproj",
+        "packagesPath": "/Users/jpmcdc/.nuget/packages/",
+        "outputPath": "/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry.iOS/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/jpmcdc/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {
+              "/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry.csproj": {
+                "projectPath": "/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.1.0.581479, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry.csproj",
+        "projectName": "Pocket_Pantry",
+        "projectPath": "/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry.csproj",
+        "packagesPath": "/Users/jpmcdc/.nuget/packages/",
+        "outputPath": "/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/jpmcdc/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.1.0.581479, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

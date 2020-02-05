@@ -1,0 +1,15 @@
+/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/bin/Debug/netstandard2.0/Pocket_Pantry.deps.json
+/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/bin/Debug/netstandard2.0/Pocket_Pantry.dll
+/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/bin/Debug/netstandard2.0/Pocket_Pantry.pdb
+/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/obj/Debug/netstandard2.0/Pocket_Pantry.csprojAssemblyReference.cache
+/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/obj/Debug/netstandard2.0/Views/AboutPage.xaml.g.cs
+/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/obj/Debug/netstandard2.0/Views/ItemDetailPage.xaml.g.cs
+/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/obj/Debug/netstandard2.0/Views/ItemsPage.xaml.g.cs
+/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/obj/Debug/netstandard2.0/Views/MainPage.xaml.g.cs
+/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/obj/Debug/netstandard2.0/Views/NewItemPage.xaml.g.cs
+/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/obj/Debug/netstandard2.0/Pocket_Pantry.AssemblyInfoInputs.cache
+/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/obj/Debug/netstandard2.0/Pocket_Pantry.AssemblyInfo.cs
+/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/obj/Debug/netstandard2.0/Pocket_Pantry.dll
+/Users/jpmcdc/Documents/Documents/GitHub/PocketPantry/Pocket_Pantry/Pocket_Pantry/Pocket_Pantry/obj/Debug/netstandard2.0/Pocket_Pantry.pdb

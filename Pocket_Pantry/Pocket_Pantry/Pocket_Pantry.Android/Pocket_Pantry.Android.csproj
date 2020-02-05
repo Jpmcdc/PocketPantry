@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
@@ -93,7 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Pocket_Pantry\Pocket_Pantry.csproj">
-      <Project>{DDC86971-7E5C-457D-91CE-B5858E62692D}</Project>
+      <Project>{20B6D874-CAB3-422D-BD89-D293536D352C}</Project>
       <Name>Pocket_Pantry</Name>
     </ProjectReference>
   </ItemGroup>
