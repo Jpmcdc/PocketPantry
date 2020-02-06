@@ -2,21 +2,23 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="Pocket_Pantry.Recipes_Page">
+    xmlns:local="clr-namespace:Pocket_Pantry"
+    x:Class="Pocket_Pantry.Recipes_Page" Title="Recipes" Icon="baseline_favorite_black_18dp.png">
 
     <ContentPage.Content>
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <!-- Place new controls here -->
+                <Label Text="Welcome to FAVORITES PAGE"/>
+                
+                <Grid BackgroundColor="AliceBlue" >
 
-        <Grid BackgroundColor="AliceBlue" >
-            
+                    <!--<ListView ItemsSource="" Margin="-18,60,0,0"><ListView.ItemTemplate><DataTemplate></DataTemplate></ListView.ItemTemplate></ListView>-->
 
-           <ListView ItemsSource="" Margin="-18,60,0,0"><ListView.ItemTemplate><DataTemplate></DataTemplate></ListView.ItemTemplate></ListView>
-
-           <Button Text="Add" Margin="250,-490,0,0"/>
+                <Button Text="Add" Margin="250,-490,0,0"/>
            
+                </Grid>
 
-
-        </Grid>
-
-    </ContentPage.Content>
+            </StackLayout>
+        </ContentPage.Content>
 
 </ContentPage>
