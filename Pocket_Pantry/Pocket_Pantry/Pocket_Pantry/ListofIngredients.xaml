@@ -1,7 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Pocket_Pantry.ListViewPage1">
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Pocket_Pantry.ListViewPage1" Title="Pantry" Icon="baseline_account_box_black_18dp.png">
+    <!-- Can change title of tab or icon image ^ -->
+
+<ContentPage.Content>
+      
   <ListView x:Name="MyListView"
             ItemsSource="{Binding Items}"
             ItemTapped="Handle_ItemTapped"
@@ -29,5 +34,6 @@
       </DataTemplate>
     </ListView.ItemTemplate>
     -->
-  </ListView>
+    </ListView>
+   </ContentPage.Content>
 </ContentPage>

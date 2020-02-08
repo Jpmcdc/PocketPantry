@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Pocket_Pantry"
     x:Class="Pocket_Pantry.Recipes_Page" Title="Recipes" Icon="baseline_favorite_black_18dp.png">
+    <!-- Can change title of tab or icon image -->
 
     <ContentPage.Content>
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center">

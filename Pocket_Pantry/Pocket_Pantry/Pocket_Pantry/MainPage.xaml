@@ -20,14 +20,9 @@
     </local:Recipes_Page>
 
 <!-- Third Page: Profile tab-->
-    <ContentPage Title="PROFILE" Icon="baseline_account_box_black_18dp.png">
-        <ContentPage.Content>
-            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                <!-- Place new controls here -->
-                <Label Text="Welcome to PROFILE PAGE"/>
-            </StackLayout>
-        </ContentPage.Content>
-    </ContentPage>
+    <local:ListViewPage1>
+
+    </local:ListViewPage1>
 
 </TabbedPage>
 
