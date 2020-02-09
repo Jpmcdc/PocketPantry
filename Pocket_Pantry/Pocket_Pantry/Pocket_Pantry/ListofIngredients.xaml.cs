@@ -62,7 +62,7 @@ namespace Pocket_Pantry
         private void PantrySearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
         {
             var keyword = PantrySearchBar.Text;
-            var result = Items.Where(x => x.Contains(keyword));
+            var result = Items.Where(x=>x.ToLower().Contains(keyword.ToLower()));
 
             MyListView.ItemsSource = result;
         }
