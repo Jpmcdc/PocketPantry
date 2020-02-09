@@ -8,13 +8,15 @@
 <ContentPage.Content>
     <StackLayout>
         <!-- TODO: Adjust Search bar to show lower -->
-    <SearchBar x:Name="PantrySearchBar" TextChanged="PantrySearchBar_OnTextChanged">
+    <SearchBar x:Name="PantrySearchBar" TextChanged="PantrySearchBar_OnTextChanged" Margin="0,60,0,0">
 
     </SearchBar>
+
   <ListView x:Name="MyListView"
             ItemsSource="{Binding Items}"
             ItemTapped="MyListView_OnItemTapped" 
-            CachingStrategy="RecycleElement">
+            CachingStrategy="RecycleElement"
+            Margin="-20,0,0,0">
 
     <!--Built in Cells-->
     <ListView.ItemTemplate>
