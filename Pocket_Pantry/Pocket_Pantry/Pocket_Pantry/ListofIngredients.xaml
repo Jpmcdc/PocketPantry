@@ -6,19 +6,25 @@
     <!-- Can change title of tab or icon image ^ -->
 
 <ContentPage.Content>
-      
+    <StackLayout>
+        <!-- TODO: Adjust Search bar to show lower -->
+    <SearchBar x:Name="PantrySearchBar" TextChanged="PantrySearchBar_OnTextChanged">
+
+    </SearchBar>
   <ListView x:Name="MyListView"
             ItemsSource="{Binding Items}"
-            ItemTapped="Handle_ItemTapped"
+            ItemTapped="MyListView_OnItemTapped" 
             CachingStrategy="RecycleElement">
-            
+
     <!--Built in Cells-->
     <ListView.ItemTemplate>
         <DataTemplate>
             <TextCell Text="{Binding .}" />
         </DataTemplate>
     </ListView.ItemTemplate>
-    
+
+
+    <!--Bottom stays commented out-->
     <!--Custom View Cells-->
     <!--
     <ListView.ItemTemplate>
@@ -34,6 +40,9 @@
       </DataTemplate>
     </ListView.ItemTemplate>
     -->
+
+
     </ListView>
+        </StackLayout>
    </ContentPage.Content>
 </ContentPage>

@@ -19,7 +19,7 @@
 
     </local:Recipes_Page>
 
-<!-- Third Page: Profile tab-->
+<!-- Third Page: Pantry tab-->
     <local:ListViewPage1>
 
     </local:ListViewPage1>
