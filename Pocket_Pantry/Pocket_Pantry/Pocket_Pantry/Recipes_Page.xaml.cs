@@ -56,6 +56,18 @@ namespace Pocket_Pantry
 
 
             BindingContext = this;
+
+
+        }
+
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            Recipe selectedItem = e.SelectedItem as Recipe;
+        }
+
+        private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            Recipe tappedItem = e.Item as Recipe;
         }
 
       
