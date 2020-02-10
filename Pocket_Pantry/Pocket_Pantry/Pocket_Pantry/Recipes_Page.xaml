@@ -17,7 +17,7 @@
 
                 <!-- TODO: Make a new method to add recipes -->
                 <Button x:Name="AddRecipe" Text="New Recipe" HorizontalOptions="CenterAndExpand" BorderColor="LightGray"
-                        BorderWidth="1" CornerRadius="20" Padding="18,10,18,10" Margin="250,10,0,0" FontSize="Header"/>
+                        BorderWidth="1" CornerRadius="20" Padding="18,10,18,10" Margin="250,10,0,0" />
 
                 
                 <ListView ItemsSource=" {Binding Recipes}" />

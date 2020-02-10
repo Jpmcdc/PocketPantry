@@ -12,7 +12,7 @@
 
         <!-- TODO: Make a new method to add recipes -->
         <Button x:Name="AddNewIngredient" Text="New Ingredient" HorizontalOptions="CenterAndExpand"
-                BorderColor="LightGray" CornerRadius="20" BorderWidth="1" Padding="18,10,18,10" Margin="225,10,0,0" FontSize="Header"/>
+                BorderColor="LightGray" CornerRadius="20" BorderWidth="1" Padding="18,10,18,10" Margin="225,10,0,0" />
 
         <ListView x:Name="MyListView"
         ItemsSource="{Binding Items}"
