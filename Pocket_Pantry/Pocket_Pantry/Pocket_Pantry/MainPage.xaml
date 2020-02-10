@@ -5,7 +5,7 @@
              x:Class="Pocket_Pantry.MainPage">
 
 <!-- First Page: Home tab-->
-    <ContentPage Title="Home" Icon="baseline_home_black_18dp.png">
+    <ContentPage Title="Home" Icon="homeLogo.png">
         <ContentPage.Content>
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                 <!-- Place new controls here -->

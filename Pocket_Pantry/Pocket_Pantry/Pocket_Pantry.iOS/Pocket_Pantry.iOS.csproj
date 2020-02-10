@@ -157,4 +157,9 @@
       <Name>Pocket_Pantry</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pantryLogo.png" />
+    <BundleResource Include="Resources\recipesLogo.png" />
+    <BundleResource Include="Resources\homeLogo.png" />
+  </ItemGroup>
 </Project>

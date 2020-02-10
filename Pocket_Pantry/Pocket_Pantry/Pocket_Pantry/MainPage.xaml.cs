@@ -13,5 +13,9 @@ namespace Pocket_Pantry
         {
             InitializeComponent();
         }
+
+        void ContentPage_SizeChanged(System.Object sender, System.EventArgs e)
+        {
+        }
     }
 }
