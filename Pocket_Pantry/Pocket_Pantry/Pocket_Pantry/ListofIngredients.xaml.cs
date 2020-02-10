@@ -32,7 +32,7 @@ namespace Pocket_Pantry
 			MyListView.ItemsSource = Items;
         }
 
-        //Tap item = Pop up appears showing what item was tapped
+        //Tap item = Pop up appears showing which item was tapped
         private void MyListView_OnItemTapped(object sender, ItemTappedEventArgs e)
         {
             try
@@ -43,7 +43,7 @@ namespace Pocket_Pantry
             }
             catch(Exception ex)
             {
-
+                Console.Write(ex);
             }
          }
 

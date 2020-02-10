@@ -45,7 +45,7 @@ namespace Pocket_Pantry
                 },
                    new Recipe
                 {
-                    Title = "Grille Peanut Butter and Banana Sandwich",
+                    Title = "Grilled Peanut Butter and Banana Sandwich",
                     Type = "Sandwich"
 
                 }
