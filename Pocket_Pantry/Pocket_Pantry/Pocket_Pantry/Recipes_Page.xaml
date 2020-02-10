@@ -16,19 +16,17 @@
                 <SearchBar x:Name="PantrySearchBar" Margin="0,60,0,0" />
 
                 <!-- TODO: Make a new method to add recipes -->
-                <Button x:Name="AddRecipe" Text="New Recipe" HorizontalOptions="CenterAndExpand" BorderColor="LightGray" BorderWidth="1" Padding="18,10,18,10" Margin="250,10,0,0" FontSize="Header"/>
+                <Button x:Name="AddRecipe" Text="New Recipe" HorizontalOptions="CenterAndExpand" BorderColor="LightGray"
+                        BorderWidth="1" CornerRadius="20" Padding="18,10,18,10" Margin="250,10,0,0" FontSize="Header"/>
 
                 
                 <ListView ItemsSource=" {Binding Recipes}" />
 
 
                 </StackLayout>
+
                 <!--<ListView ItemsSource="" Margin="-18,60,0,0"><ListView.ItemTemplate><DataTemplate></DataTemplate></ListView.ItemTemplate></ListView>-->
-
                 <!--<Button Text="Add" Margin="250,-490,0,0"/>-->
-           
-                
-
             
         </ContentPage.Content>
 
