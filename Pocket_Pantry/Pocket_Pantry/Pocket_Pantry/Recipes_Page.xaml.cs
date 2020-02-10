@@ -29,7 +29,28 @@ namespace Pocket_Pantry
                     Title = "Onion Soup",
                     Type = "Soups"
 
+                },
+
+                 new Recipe
+                {
+                    Title = "Chicken Enchiladas",
+                    Type = "Mexican"
+
+                },
+                  new Recipe
+                {
+                    Title = "Lemon Meringue",
+                    Type = "Cheesecake"
+
+                },
+                   new Recipe
+                {
+                    Title = "Grille Peanut Butter and Banana Sandwich",
+                    Type = "Sandwich"
+
                 }
+
+
             };
 
 

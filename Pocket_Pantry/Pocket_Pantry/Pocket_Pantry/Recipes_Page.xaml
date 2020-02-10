@@ -9,15 +9,17 @@
     <ContentPage.Content>
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                 <!-- Place new controls here -->
-                <Label Text="Recipes"/>
-                
-                <Grid BackgroundColor="AliceBlue" >
+            <Button Text="Add more recipes"
+                HorizontalOptions="CenterAndExpand"
+                 />
+
+            <Grid BackgroundColor="AliceBlue" >
                 <StackLayout Margin="20,35,20,20">
                     <ListView ItemsSource="{Binding Recipes}" />
                 </StackLayout>
                 <!--<ListView ItemsSource="" Margin="-18,60,0,0"><ListView.ItemTemplate><DataTemplate></DataTemplate></ListView.ItemTemplate></ListView>-->
 
-                <Button Text="Add" Margin="250,-490,0,0"/>
+                <!--<Button Text="Add" Margin="250,-490,0,0"/>-->
            
                 </Grid>
 
