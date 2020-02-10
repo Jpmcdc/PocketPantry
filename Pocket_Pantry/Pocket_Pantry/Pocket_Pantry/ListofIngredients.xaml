@@ -7,23 +7,23 @@
 
 <ContentPage.Content>
     <StackLayout>
-        <!-- TODO: Adjust Search bar to show lower -->
-    <SearchBar x:Name="PantrySearchBar" TextChanged="PantrySearchBar_OnTextChanged" Margin="0,60,0,0">
+        
+        <SearchBar x:Name="PantrySearchBar" TextChanged="PantrySearchBar_OnTextChanged" Margin="0,60,0,0" />
 
-    </SearchBar>
+        <!-- TODO: Make a new method to add recipes -->
+        <Button x:Name="AddNewIngredient" Text="New Ingredient" HorizontalOptions="CenterAndExpand" BorderColor="LightGray" BorderWidth="1" Padding="18,10,18,10" Margin="225,10,0,0" FontSize="Header"/>
 
-  <ListView x:Name="MyListView"
-            ItemsSource="{Binding Items}"
-            ItemTapped="MyListView_OnItemTapped" 
-            CachingStrategy="RecycleElement"
-            Margin="-20,0,0,0">
+        <ListView x:Name="MyListView"
+        ItemsSource="{Binding Items}"
+        ItemTapped="MyListView_OnItemTapped" 
+        CachingStrategy="RecycleElement" >
 
-    <!--Built in Cells-->
-    <ListView.ItemTemplate>
-        <DataTemplate>
-            <TextCell Text="{Binding .}" />
-        </DataTemplate>
-    </ListView.ItemTemplate>
+            <!--Built in Cells-->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding .}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
 
     <!--Custom View Cells-->
     <!--
@@ -42,7 +42,7 @@
     -->
 
 
-    </ListView>
-        </StackLayout>
-   </ContentPage.Content>
+        </ListView>
+    </StackLayout>
+</ContentPage.Content>
 </ContentPage>

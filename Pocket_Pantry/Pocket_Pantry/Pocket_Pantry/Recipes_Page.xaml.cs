@@ -57,6 +57,8 @@ namespace Pocket_Pantry
 
             BindingContext = this;
         }
+
+      
     }
 }
 
