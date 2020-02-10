@@ -15,7 +15,35 @@
 
             <Grid BackgroundColor="AliceBlue" >
                 <StackLayout Margin="20,35,20,20">
-                    <ListView ItemsSource="{Binding Recipes}" />
+                    <ListView ItemsSource="{Binding Recipes}" 
+                              HasUnevenRows="true"
+          ItemSelected="ListView_ItemSelected"
+          ItemTapped="ListView_ItemTapped">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Padding="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        
+                                        <Label Grid.Column="1"
+                           Text="{Binding Title}"
+                           FontAttributes="Bold" />
+                                        <Label Grid.Row="1"
+                           Grid.Column="1"
+                           Text="{Binding Type}"
+                           VerticalOptions="End" />
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </StackLayout>
                 <!--<ListView ItemsSource="" Margin="-18,60,0,0"><ListView.ItemTemplate><DataTemplate></DataTemplate></ListView.ItemTemplate></ListView>-->
 
