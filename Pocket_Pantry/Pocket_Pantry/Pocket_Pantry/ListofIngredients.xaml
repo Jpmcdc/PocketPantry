@@ -1,19 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Pocket_Pantry.ListViewPage1">
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Pocket_Pantry.ListViewPage1" Title="Pantry" Icon="baseline_account_box_black_18dp.png">
+    <!-- Can change title of tab or icon image ^ -->
+
+<ContentPage.Content>
+    <StackLayout>
+        <!-- TODO: Adjust Search bar to show lower -->
+    <SearchBar x:Name="PantrySearchBar" TextChanged="PantrySearchBar_OnTextChanged" Margin="0,60,0,0">
+
+    </SearchBar>
+
   <ListView x:Name="MyListView"
             ItemsSource="{Binding Items}"
-            ItemTapped="Handle_ItemTapped"
-            CachingStrategy="RecycleElement">
-            
+            ItemTapped="MyListView_OnItemTapped" 
+            CachingStrategy="RecycleElement"
+            Margin="-20,0,0,0">
+
     <!--Built in Cells-->
     <ListView.ItemTemplate>
         <DataTemplate>
             <TextCell Text="{Binding .}" />
         </DataTemplate>
     </ListView.ItemTemplate>
-    
+
     <!--Custom View Cells-->
     <!--
     <ListView.ItemTemplate>
@@ -29,5 +40,9 @@
       </DataTemplate>
     </ListView.ItemTemplate>
     -->
-  </ListView>
+
+
+    </ListView>
+        </StackLayout>
+   </ContentPage.Content>
 </ContentPage>

@@ -1,14 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Pocket_Pantry"
              x:Class="Pocket_Pantry.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+<!-- First Page: Home tab-->
+    <ContentPage Title="HOME" Icon="baseline_home_black_18dp.png">
+        <ContentPage.Content>
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <!-- Place new controls here -->
+                <Label Text="Welcome to Xamarin.Forms!!!"/>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
 
-</ContentPage>
+<!-- Second Page: Recipes tab-->
+    <local:Recipes_Page>
+
+    </local:Recipes_Page>
+
+<!-- Third Page: Pantry tab-->
+    <local:ListViewPage1>
+
+    </local:ListViewPage1>
+
+</TabbedPage>
+

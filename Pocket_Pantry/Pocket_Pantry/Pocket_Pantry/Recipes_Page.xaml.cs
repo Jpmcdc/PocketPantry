@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using Xamarin.Forms;
 
 namespace Pocket_Pantry
 {
-    public partial class MainPage : TabbedPage
+    public partial class Recipes_Page : ContentPage
     {
-        public MainPage()
+        public Recipes_Page()
         {
             InitializeComponent();
         }
