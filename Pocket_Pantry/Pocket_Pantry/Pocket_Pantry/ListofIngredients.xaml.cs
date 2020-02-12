@@ -20,6 +20,7 @@ namespace Pocket_Pantry
         {
             InitializeComponent();
 
+            // TODO: Change this collection type to <Ingredient>
             Items = new ObservableCollection<string>
             {
                 "Flour",
