@@ -20,9 +20,9 @@
     </local:Recipes_Page>
 
 <!-- Third Page: Pantry tab-->
-    <local:ListViewPage1>
+    <local:Pantry_Page>
 
-    </local:ListViewPage1>
+    </local:Pantry_Page>
 
 </TabbedPage>
 

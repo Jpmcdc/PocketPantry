@@ -20,7 +20,9 @@
                         BorderWidth="1" CornerRadius="20" Padding="18,10,18,10" Margin="250,10,0,0" />
 
                 
-                <ListView ItemsSource=" {Binding Recipes}" />
+                <ListView ItemsSource=" {Binding Recipes}"
+                          ItemTapped="ListView_ItemTapped"
+                          ItemSelected="ListView_ItemSelected"/>
 
 
                 </StackLayout>

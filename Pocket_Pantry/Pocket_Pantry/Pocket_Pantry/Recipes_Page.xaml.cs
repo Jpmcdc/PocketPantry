@@ -11,7 +11,6 @@ namespace Pocket_Pantry
     
     
         public Recipes_Page() 
-
         {
             InitializeComponent();
 
@@ -19,34 +18,34 @@ namespace Pocket_Pantry
             {
                 new Recipe
                 {
-                    Title = "Greek Salad",
-                    Type = "Salads"
+                    title = "Greek Salad",
+                    type = "Salads"
 
                 },
 
                 new Recipe
                 {
-                    Title = "Onion Soup",
-                    Type = "Soups"
+                    title = "Onion Soup",
+                    type = "Soups"
 
                 },
 
                  new Recipe
                 {
-                    Title = "Chicken Enchiladas",
-                    Type = "Mexican"
+                    title = "Chicken Enchiladas",
+                    type = "Mexican"
 
                 },
                   new Recipe
                 {
-                    Title = "Lemon Meringue",
-                    Type = "Cheesecake"
+                    title = "Lemon Meringue",
+                    type = "Cheesecake"
 
                 },
                    new Recipe
                 {
-                    Title = "Grilled Peanut Butter and Banana Sandwich",
-                    Type = "Sandwich"
+                    title = "Grilled Peanut Butter and Banana Sandwich",
+                    type = "Sandwich"
 
                 }
 
