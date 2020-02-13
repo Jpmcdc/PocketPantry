@@ -5,17 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace Pocket_Pantry
-{
-    public partial class MainPage : TabbedPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+namespace Pocket_Pantry {
+    public partial class MainPage : TabbedPage {
 
-        void ContentPage_SizeChanged(System.Object sender, System.EventArgs e)
-        {
+        public MainPage() {
+            InitializeComponent();
         }
     }
 }

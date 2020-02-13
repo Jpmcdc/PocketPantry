@@ -5,48 +5,21 @@
     x:Class="Pocket_Pantry.Pantry_Page" Title="Pantry" Icon="pantryLogo.png">
     <!-- Can change title of tab or icon image ^ -->
 
-<ContentPage.Content>
-    <StackLayout>
+    <ContentPage.Content>
+        <StackLayout>
         
-        <SearchBar x:Name="PantrySearchBar"
-                   TextChanged="PantrySearchBar_OnTextChanged"
-                   Margin="0,60,0,0" />
+            <SearchBar x:Name="PantrySearchBar"
+                       TextChanged="PantrySearchBar_OnTextChanged"
+                       Margin="0,60,0,0" />
         
 
-        <!-- TODO: Make a new method to add recipes -->
-        <Button x:Name="AddNewIngredient" Text="New Ingredient" HorizontalOptions="CenterAndExpand"
-                BorderColor="LightGray" CornerRadius="20" BorderWidth="1" Padding="18,10,18,10" Margin="225,10,0,0" />
+            <!-- TODO: Make a new method to add recipes -->
+            <Button x:Name="AddNewIngredient" Text="New Ingredient" HorizontalOptions="CenterAndExpand"
+                    BorderColor="LightGray" CornerRadius="20" BorderWidth="1" Padding="18,10,18,10" Margin="225,10,0,0" />
 
-        <ListView x:Name="Pantry_List_View"
-        ItemsSource="{Binding PantryList}"
-        />
-        <!--ItemTapped="MyListView_OnItemTapped"-->
-
-            <!--Built in Cells-->
-            <!--<ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding .}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>-->
-
-            <!--Custom View Cells-->
-            <!--
-    <ListView.ItemTemplate>
-      <DataTemplate>
-        <ViewCell>
-          <StackLayout>
-            <Label Text="{Binding Text}" 
-                   Style="{DynamicResource ListItemTextStyle}" />
-            <Label Text="{Binding Detail}" 
-                   Style="{DynamicResource ListItemDetailTextStyle}"/>
-          </StackLayout>
-        </ViewCell>
-      </DataTemplate>
-    </ListView.ItemTemplate>
-    -->
-
-
+            <ListView x:Name="Pantry_List_View"
+                      ItemsSource=" {Binding PantryList} " />
 
         </StackLayout>
-</ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>

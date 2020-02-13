@@ -4,25 +4,22 @@
              xmlns:local="clr-namespace:Pocket_Pantry"
              x:Class="Pocket_Pantry.MainPage">
 
-<!-- First Page: Home tab-->
+    <!-- First Page: Home tab-->
     <ContentPage Title="Home" Icon="homeLogo.png">
         <ContentPage.Content>
+
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                <!-- Place new controls here -->
                 <Label Text="Welcome to Pocket Pantry"/>
             </StackLayout>
+
         </ContentPage.Content>
     </ContentPage>
 
-<!-- Second Page: Recipes tab-->
-    <local:Recipes_Page>
+    <!-- Second Page: Recipes tab-->
+    <local:Recipes_Page />
 
-    </local:Recipes_Page>
-
-<!-- Third Page: Pantry tab-->
-    <local:Pantry_Page>
-
-    </local:Pantry_Page>
+    <!-- Third Page: Pantry tab-->
+    <local:Pantry_Page />
 
 </TabbedPage>
 
