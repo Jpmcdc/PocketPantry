@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pocket_Pantry.View_Recipe">
+
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+
+            <Label x:Name="Title"
+                   Text="Title"/>
+
+            <Label x:Name="Ingredients"
+                   Text="Ingredients" />
+
+            <Label x:Name="Directions"
+                   Text="Directions" />
+
+            <!-- This Grid helps to hold the 2 instances of the btns horizontally laid out -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Text="Edit"
+                         />
+
+                <Button Grid.Column="1"
+                        Text="Delete"
+                        />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

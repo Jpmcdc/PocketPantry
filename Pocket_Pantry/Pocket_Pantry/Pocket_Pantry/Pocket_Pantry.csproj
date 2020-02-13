@@ -17,6 +17,6 @@
     <Compile Remove="EmptyClass.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>
