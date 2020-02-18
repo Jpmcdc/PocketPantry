@@ -18,8 +18,47 @@
                     BorderColor="LightGray" CornerRadius="20" BorderWidth="1" Padding="18,10,18,10" Margin="225,10,0,0" />
 
             <ListView x:Name="Pantry_List_View"
-                      ItemsSource="{Binding PantryList}" />
+                      ItemsSource="{Binding PantryList}">
+                <!--ItemTapped="PantryList_OnItemTapped"-->
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="1" RowSpacing="10" ColumnSpacing="20">
 
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image
+
+                                    HeightRequest="30"
+                                    HorizontalOptions="CenterAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    Aspect="AspectFill"
+                                    WidthRequest="30"
+                                    Grid.RowSpan="2"
+                                    Source="{Binding Image}"/>
+
+                                <Label Grid.Column="1"
+                                       Text="{Binding Name}"
+                                       VerticalOptions="End"/>
+
+                                <Label Grid.Column="1"
+                                       Grid.Row="1"
+                                       Text="{Binding Category}"
+                                       VerticalOptions="Start"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
         </StackLayout>
     </ContentPage.Content>

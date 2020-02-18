@@ -15,8 +15,13 @@
   <ItemGroup>
     <Compile Remove="Recipes_Page.cs" />
     <Compile Remove="EmptyClass.cs" />
+    <Compile Remove="Pantry_PageDetail.xaml.cs" />
+    <Compile Remove="View_Model\Pantry_PageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Pantry_PageDetail.xaml" />
   </ItemGroup>
 </Project>

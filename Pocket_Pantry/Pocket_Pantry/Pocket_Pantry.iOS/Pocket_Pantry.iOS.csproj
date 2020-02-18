@@ -161,5 +161,6 @@
     <BundleResource Include="Resources\pantryLogo.png" />
     <BundleResource Include="Resources\recipesLogo.png" />
     <BundleResource Include="Resources\homeLogo.png" />
+    <BundleResource Include="Resources\veggie.png" />
   </ItemGroup>
 </Project>

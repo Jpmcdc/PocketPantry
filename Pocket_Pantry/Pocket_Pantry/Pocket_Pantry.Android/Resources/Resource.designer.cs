@@ -5006,6 +5006,9 @@ namespace Pocket_Pantry.Droid
 			// aapt resource value: 0x7F070137
 			public const int tooltip_frame_light = 2131165495;
 			
+			// aapt resource value: 0x7F070138
+			public const int veggie = 2131165496;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

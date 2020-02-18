@@ -1,4 +1,5 @@
 ﻿using System;
+using Pocket_Pantry;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,6 +13,7 @@ namespace Pocket_Pantry
             InitializeComponent();
 
             MainPage = new MainPage();
+            //MainPage = new NavigationPage(new Pantry_Page());
         }
 
         protected override void OnStart()
