@@ -357,4 +357,8 @@ healthchecksdb
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
 
+#Class
+.DS_Store
+[TZ]humbs.db
+
 # End of https://www.gitignore.io/api/visualstudio,xamarinstudio
