@@ -24,7 +24,7 @@ namespace Pocket_Pantry {
         private async void ListView_ItemTapped(Object sender, ItemTappedEventArgs e)
         {
             var mydetails = e.Item as Recipe;
-            await Navigation.PushModalAsync(new View_Recipe(mydetails.title, mydetails.type));
+            await Navigation.PushModalAsync(new View_Recipe(mydetails.Title, mydetails.Type));
         }
 
 
