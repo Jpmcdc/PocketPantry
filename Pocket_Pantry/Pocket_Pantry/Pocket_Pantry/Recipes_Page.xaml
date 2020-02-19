@@ -18,9 +18,9 @@
                     BorderColor="LightGray" BorderWidth="1" CornerRadius="20" Padding="18,10,18,10" Margin="250,10,0,0" />
 
             <ListView x:Name="Recipes_List_View"
-                      ItemsSource="{Binding Recipe_List}">
-                      <!--ItemTapped="ListView_ItemTapped"
-                      ItemSelected="ListView_ItemSelected"-->
+                      ItemsSource="{Binding Recipe_List}"
+                      ItemTapped="ListView_ItemTapped">
+                      
 
                 <ListView.ItemTemplate>
                     <DataTemplate>

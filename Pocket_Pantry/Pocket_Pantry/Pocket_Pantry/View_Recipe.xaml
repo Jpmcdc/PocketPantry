@@ -6,12 +6,15 @@
     <ContentPage.Content>
         <StackLayout Margin="20">
 
+            <Label Text="Title"/>
             <Label x:Name="View_Title"
                    Text="Title"/>
 
+            <Label Text="Ingredients" />
             <Label x:Name="View_Ingredients"
                    Text="Ingredients" />
 
+            <Label Text="Directions" />
             <Label x:Name="View_Directions"
                    Text="Directions" />
 

@@ -20,7 +20,14 @@ namespace Pocket_Pantry {
             BindingContext = new RecipeViewModel();
         }
 
-        
+
+        private async void ListView_ItemTapped(Object sender, ItemTappedEventArgs e)
+        {
+            var mydetails = e.Item as Recipe;
+            await Navigation.PushModalAsync(new View_Recipe(mydetails.title, mydetails.type));
+        }
+
+
         //private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e) {
         //    Recipe selectedItem = e.SelectedItem as Recipe;
         //}
@@ -33,7 +40,7 @@ namespace Pocket_Pantry {
         //    Recipe tappedItem = e.Item as Recipe;
         //}
 
-      
+
     }
 }
 
