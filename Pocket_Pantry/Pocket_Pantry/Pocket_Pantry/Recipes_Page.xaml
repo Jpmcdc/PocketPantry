@@ -38,12 +38,12 @@
                                 </Grid.ColumnDefinitions>
 
                                 <Label Grid.Column="1"
-                                       Text="{Binding title}"
+                                       Text="{Binding Title}"
                                        VerticalOptions="End"/>
 
                                 <Label Grid.Column="1"
                                        Grid.Row="1"
-                                       Text="{Binding type}"
+                                       Text="{Binding Type}"
                                        VerticalOptions="Start"/>
                             </Grid>
                         </ViewCell>
