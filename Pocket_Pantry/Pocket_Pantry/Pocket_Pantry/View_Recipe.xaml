@@ -6,13 +6,13 @@
     <ContentPage.Content>
         <StackLayout Margin="20">
 
-            <Label x:Name="Title"
+            <Label x:Name="View_Title"
                    Text="Title"/>
 
-            <Label x:Name="Ingredients"
+            <Label x:Name="View_Ingredients"
                    Text="Ingredients" />
 
-            <Label x:Name="Directions"
+            <Label x:Name="View_Directions"
                    Text="Directions" />
 
             <!-- This Grid helps to hold the 2 instances of the btns horizontally laid out -->

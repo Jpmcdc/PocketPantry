@@ -17,10 +17,39 @@
             <Button x:Name="AddRecipe" Text="New Recipe" HorizontalOptions="CenterAndExpand"
                     BorderColor="LightGray" BorderWidth="1" CornerRadius="20" Padding="18,10,18,10" Margin="250,10,0,0" />
 
-            <ListView x:Name="Recipies_List_View"
-                      ItemsSource="{Binding Recipes} "
-                      ItemTapped="ListView_ItemTapped"
-                      ItemSelected="ListView_ItemSelected"/>
+            <ListView x:Name="Recipes_List_View"
+                      ItemsSource="{Binding Recipe_List}">
+                      <!--ItemTapped="ListView_ItemTapped"
+                      ItemSelected="ListView_ItemSelected"-->
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="1" RowSpacing="10" ColumnSpacing="20">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="1"
+                                       Text="{Binding title}"
+                                       VerticalOptions="End"/>
+
+                                <Label Grid.Column="1"
+                                       Grid.Row="1"
+                                       Text="{Binding type}"
+                                       VerticalOptions="Start"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
 
         </StackLayout>            
