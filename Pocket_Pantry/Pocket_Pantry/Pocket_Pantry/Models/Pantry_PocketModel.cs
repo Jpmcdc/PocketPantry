@@ -9,9 +9,9 @@ namespace Pocket_Pantry.Models
         public string Image { get; set; }
         public string Ingredients { get; set; }
 
-        internal object ToLower()
-        {
-            throw new NotImplementedException();
-        }
+        //internal object ToLower()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
