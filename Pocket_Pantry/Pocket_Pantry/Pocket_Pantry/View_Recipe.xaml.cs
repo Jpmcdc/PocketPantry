@@ -13,5 +13,10 @@ namespace Pocket_Pantry {
             View_Title.Text = title;
             
         }
+
+        async void View_Recipe_Back(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
     }
 }

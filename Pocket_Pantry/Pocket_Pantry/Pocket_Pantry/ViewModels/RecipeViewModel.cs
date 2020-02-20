@@ -12,42 +12,40 @@ namespace Pocket_Pantry.ViewModels
         {
             Recipe GreekSalad = new Recipe
             {
-                Title = "Greek Salad",
-                Type = "Salads"
+                title = "Greek Salad",
+                type = "Salads"
             };
 
             Recipe OnionSoup = new Recipe
             {
-                Title = "Onion Soup",
-                Type = "Soups"
+                title = "Onion Soup",
+                type = "Soups"
             };
 
             Recipe Enchiladas = new Recipe
             {
-                Title = "Chicken Enchiladas",
-                Type = "Mexican"
+                title = "Chicken Enchiladas",
+                type = "Mexican"
             };
 
             Recipe LemonMeringue = new Recipe
             {
-                Title = "Lemon Meringue",
-                Type = "Cheesecake"
+                title = "Lemon Meringue",
+                type = "Cheesecake"
             };
 
             Recipe PBSandwitch = new Recipe
             {
-                Title = "Grilled Peanut Butter and Banana Sandwich",
-                Type = "Sandwich"
+                title = "Grilled Peanut Butter and Banana Sandwich",
+                type = "Sandwich"
             };
 
-            Recipe_List = new ObservableCollection<Recipe>
-            {
-                GreekSalad,
-                OnionSoup,
-                Enchiladas,
-                LemonMeringue,
-                PBSandwitch
-            };
+            Recipe_List = new ObservableCollection<Recipe>();
+            Recipe_List.Add(GreekSalad);
+            Recipe_List.Add(OnionSoup);
+            Recipe_List.Add(Enchiladas);
+            Recipe_List.Add(LemonMeringue);
+            Recipe_List.Add(PBSandwitch);
         }
     }
 }

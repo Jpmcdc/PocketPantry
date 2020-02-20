@@ -19,33 +19,15 @@
 
             <ListView x:Name="Recipes_List_View"
                       ItemsSource="{Binding Recipe_List}"
-                      ItemTapped="ListView_ItemTapped">
-                      
+                      ItemTapped="ListView_ItemTapped">                      
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid Padding="1" RowSpacing="10" ColumnSpacing="20">
 
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="10"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
-
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-
-                                <Label Grid.Column="1"
-                                       Text="{Binding Title}"
-                                       VerticalOptions="End"/>
-
-                                <Label Grid.Column="1"
-                                       Grid.Row="1"
-                                       Text="{Binding Type}"
-                                       VerticalOptions="Start"/>
-                            </Grid>
+                            <Label Text="{Binding title}"
+                                   Margin="20, 20, 0, 0"/>
+                           
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

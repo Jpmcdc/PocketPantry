@@ -4,19 +4,25 @@
              x:Class="Pocket_Pantry.View_Recipe">
 
     <ContentPage.Content>
-        <StackLayout Margin="20">
+        <StackLayout Margin="0, 40, 0, 0">
 
-            <Label Text="Title"/>
+            <Label Text="Title"
+                   Margin="20, 20, 0, 0" />
             <Label x:Name="View_Title"
-                   Text="Title"/>
+                   Margin="20, 0, 0, 0"
+                   Text="..."/>
 
-            <Label Text="Ingredients" />
+            <Label Text="Ingredients"
+                   Margin="20, 20, 0, 0" />
             <Label x:Name="View_Ingredients"
-                   Text="Ingredients" />
+                   Margin="20, 0, 0, 0"
+                   Text="..." />
 
-            <Label Text="Directions" />
+            <Label Text="Directions"
+                   Margin="20, 20, 0, 0" />
             <Label x:Name="View_Directions"
-                   Text="Directions" />
+                   Margin="20, 0, 0, 0"
+                   Text="..." />
 
             <!-- This Grid helps to hold the 2 instances of the btns horizontally laid out -->
             <Grid>
@@ -26,10 +32,17 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Text="Edit"
+                        HorizontalOptions="CenterAndExpand"
+                        BorderColor="LightGray" BorderWidth="1" CornerRadius="20" Padding="38, 0, 38, 0"
+                        Margin="60, 30, 0, 0"
                          />
 
                 <Button Grid.Column="1"
-                        Text="Delete"
+                        Text="Back"
+                        HorizontalOptions="CenterAndExpand"
+                        BorderColor="LightGray" BorderWidth="1" CornerRadius="20" Padding="38, 0, 38, 0"
+                        Margin="0, 30, 60, 0"
+                        Clicked="View_Recipe_Back"
                         />
             </Grid>
         </StackLayout>
