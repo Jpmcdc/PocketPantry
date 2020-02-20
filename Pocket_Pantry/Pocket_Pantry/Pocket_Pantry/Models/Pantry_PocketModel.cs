@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+
 namespace Pocket_Pantry.Models
 {
     public class Pantry_PocketModel
@@ -9,9 +13,7 @@ namespace Pocket_Pantry.Models
         public string Image { get; set; }
         public string Ingredients { get; set; }
 
-        //internal object ToLower()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        //IEnumerable<Pantry_PocketModel> Pantry_PocketModels;
+
     }
 }

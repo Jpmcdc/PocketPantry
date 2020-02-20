@@ -3,17 +3,20 @@ using System.Linq;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using System.Collections.Generic;
+using System;
+using System.Windows.Input;
 //using System.Collections;
 
 namespace Pocket_Pantry
 {
 
-    public partial class Pantry_Page : ContentPage {
+    public partial class Pantry_Page : ContentPage
+    {
 
         //private IEnumerable<object> PantryList;
 
-        //public ObservableCollection<Pantry_PocketModel> PantryList { get; set; }
-        public IEnumerable<object> PantryList { get; private set;}
+        public ObservableCollection<Pantry_PocketModel> PantryList { get; set; }
+        //public IEnumerable<string> Name { get; set; }
 
         public Pantry_Page()
         {
@@ -46,70 +49,32 @@ namespace Pocket_Pantry
             Pantry_List_View.ItemsSource = PantryList;
         }
 
+        /*
+         * TODO: Fix method below
+         */
+
+        //public ICommand SearchCommand => new Command(() =>
+        //{
+        //    string keyword = PantrySearchBar.Text;
+        //    var result = PantryList.Where(Name => Name.Contains(keyword));
+        //    //IEnumerable<String> searchresult = PantryList.Where(Name => name.Contains(keyword));
+
+        //    PantryList = new ObservableCollection<Pantry_PocketModel>(result);
+
+        //});
+
         private void PantrySearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
         {
-            string keyword = PantrySearchBar.Text;
-            IEnumerable<object> result = PantryList.Where(x => x.Equals(keyword)); //add ToLower() case sensitive
-
-            Pantry_List_View.ItemsSource = result;
+            ((SearchBar)sender).SearchCommand?.Execute(e.NewTextValue);
         }
 
-        //On Tap = Another details page
-        //private async void PantryList_OnItemTapped(Object sender, ItemTappedEventArgs e)
+        //private void PantrySearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
         //{
-        //    var myDetails = e.Item as Pantry_PocketModel;
-        //    await Navigation.PushAsync(new Pantry_PageDetail(myDetails.Name, myDetails.Ingredients, myDetails.Image));
+        //    string keyword = PantrySearchBar.Text;
+        //    IEnumerable<object> result = PantryList.Where(x => x.Equals(keyword)); //add ToLower() case sensitive
+
+        //    Pantry_List_View.ItemsSource = result;
         //}
+
     }
 }
-
-
-
-
-///**
-//    *  The purpose of this list is to store all the Ingredients the user hasa dn doesn't in his pantry
-//    *  This list will populate the Pantry_List_View in the xaml
-//    */
-//public IList<Ingredient> Pantry_List { get; private set; }
-
-//public Pantry_Page()
-//{
-//    InitializeComponent();
-
-//    Pantry_List = new List<Ingredient> {
-
-//                new Ingredient {
-//                    name = "Banana",
-//                    quantity_type = "General Unit"
-//                },
-
-//                new Ingredient {
-//                    name = "Flour",
-//                    quantity_type = "Oz"
-//                }
-//            };
-
-//    BindingContext = this;
-//}
-
-///**
-// *  Search Bar
-// *  Filter the names of Ingredients in Pantry_List to match user input in the search bar
-// *  TODO: Make this work
-// */
-//private void PantrySearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
-//{
-//    var keyword = PantrySearchBar.Text;
-//    var result = "nothing";
-
-//    for (int i = 0; i < Pantry_List.Count; i++)
-//    {
-//        //TODO: add adapter
-//        //result = PantryList.Contains(keyword).Where(x => x.Contains(keyword));
-//    }
-//    Pantry_List_View.ItemsSource = result;
-//}
-
-//void Pantry_List_View_ItemTapped(System.Object sender, Xamarin.Forms.ItemTappedEventArgs e)
-//{
-//}

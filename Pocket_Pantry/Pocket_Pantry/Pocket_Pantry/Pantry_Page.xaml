@@ -9,9 +9,17 @@
         <StackLayout>
 
             <!-- TODO: Fix Search Bar -->
+            <!--<SearchBar x:Name="PantrySearchBar"
+                       TextChanged="PantrySearchBar_OnTextChanged"
+                       Margin="0,60,0,0" />-->
+
             <SearchBar x:Name="PantrySearchBar"
                        TextChanged="PantrySearchBar_OnTextChanged"
-                       Margin="0,60,0,0" />
+                       SearchCommand="{Binding SearchCommand}"
+                       SearchCommandParameter="{Binding Text, Source={x:Reference PantrySearchBar}}"
+                       Margin="0,60,0,0">
+        
+            </SearchBar>
 
             <!-- TODO: Make a new event handler to add recipes -->
             <Button x:Name="AddNewIngredient" Text="New Ingredient" HorizontalOptions="CenterAndExpand"
