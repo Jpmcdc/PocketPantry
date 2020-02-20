@@ -2,51 +2,54 @@
 using System.Linq;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
-using System.Collections;
+using System.Collections.Generic;
+//using System.Collections;
 
 namespace Pocket_Pantry
 {
 
     public partial class Pantry_Page : ContentPage {
 
-        public ObservableCollection<Pantry_PocketModel> PantryList { get; set; }
-        public IEnumerable Ingredients { get; }
+        //private IEnumerable<object> PantryList;
+
+        //public ObservableCollection<Pantry_PocketModel> PantryList { get; set; }
+        public IEnumerable<object> PantryList { get; private set;}
 
         public Pantry_Page()
         {
             InitializeComponent();
 
-            PantryList = new ObservableCollection<Pantry_PocketModel>();
-
-            PantryList.Add(new Pantry_PocketModel
+            ObservableCollection<Pantry_PocketModel> PantryList = new ObservableCollection<Pantry_PocketModel>
             {
-                Name = "Carrot",
-                Image = "veggie.png",
-                Category = "Veggie",
-            });
+                new Pantry_PocketModel
+                {
+                    Name = "Carrot",
+                    Image = "veggie.png",
+                    Category = "Veggie",
+                },
 
-            PantryList.Add(new Pantry_PocketModel
-            {
-                Name = "Zuchinni",
-                Image = "veggie.png",
-                Category = "Veggie",
-            });
+                new Pantry_PocketModel
+                {
+                    Name = "Zuchinni",
+                    Image = "veggie.png",
+                    Category = "Veggie",
+                },
 
-            PantryList.Add(new Pantry_PocketModel
-            {
-                Name = "Tomato",
-                Image = "veggie.png",
-                Category = "Veggie",
-            });
-
+                new Pantry_PocketModel
+                {
+                    Name = "Tomato",
+                    Image = "veggie.png",
+                    Category = "Veggie",
+                }
+            };
 
             Pantry_List_View.ItemsSource = PantryList;
         }
 
         private void PantrySearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
         {
-            var keyword = PantrySearchBar.Text;
-            var result = PantryList.Where(x => x.Equals(keyword)); //add ToLower() case sensitive
+            string keyword = PantrySearchBar.Text;
+            IEnumerable<object> result = PantryList.Where(x => x.Equals(keyword)); //add ToLower() case sensitive
 
             Pantry_List_View.ItemsSource = result;
         }
