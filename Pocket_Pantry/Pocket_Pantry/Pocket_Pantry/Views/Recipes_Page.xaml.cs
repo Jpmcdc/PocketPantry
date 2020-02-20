@@ -24,22 +24,13 @@ namespace Pocket_Pantry {
         private async void ListView_ItemTapped(Object sender, ItemTappedEventArgs e)
         {
             var mydetails = e.Item as Recipe;
-            await Navigation.PushModalAsync(new View_Recipe(mydetails.Title, mydetails.Type));
+            await Navigation.PushModalAsync(new View_Recipe(mydetails.title, mydetails.type));
         }
 
-
-        //private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e) {
-        //    Recipe selectedItem = e.SelectedItem as Recipe;
-        //}
-
-        /**
-         *  Handle the event of clicking on a recipie in the list
-         *  This should open a Recipe Page with all the information form the specific recipe
-         */
-        //private void ListView_ItemTapped(object sender, ItemTappedEventArgs e) {
-        //    Recipe tappedItem = e.Item as Recipe;
-        //}
-
+        private async void AddRecipe_Clicked(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new New_Recipe());
+        }
 
     }
 }
