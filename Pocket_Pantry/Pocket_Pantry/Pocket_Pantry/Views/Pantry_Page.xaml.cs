@@ -5,7 +5,7 @@ using Xamarin.Forms;
 using System.Collections.Generic;
 using System;
 using System.Windows.Input;
-//using System.Collections;
+using System.Collections;
 
 namespace Pocket_Pantry
 {
@@ -50,28 +50,39 @@ namespace Pocket_Pantry
         }
 
         /*
-         * TODO: Fix method below
+         * TODO: These are four ways to get the search bar going
          */
+
+        public void PantrySearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            string keyword = PantrySearchBar.Text;
+            var result = PantryList.Where(x => x.Name.Contains(keyword));
+
+            if (string.IsNullOrWhiteSpace(e.NewTextValue))
+                Pantry_List_View.ItemsSource = result;
+            else Pantry_List_View.ItemsSource = result.Where(x => x.Name.Contains(e.NewTextValue));
+        }
 
         //public ICommand SearchCommand => new Command(() =>
         //{
         //    string keyword = PantrySearchBar.Text;
-        //    var result = PantryList.Where(Name => Name.Contains(keyword));
-        //    //IEnumerable<String> searchresult = PantryList.Where(Name => name.Contains(keyword));
+        //    var result = PantryList.Where(x => x.Name.Contains(keyword));
+        //    //IEnumerable<String> searchresult = PantryList.Where(x => x.Contains(keyword));
 
         //    PantryList = new ObservableCollection<Pantry_PocketModel>(result);
 
         //});
 
-        private void PantrySearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
-        {
-            ((SearchBar)sender).SearchCommand?.Execute(e.NewTextValue);
-        }
+        //private void PantrySearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
+        //{
+        //    ((SearchBar)sender).SearchCommand?.Execute(e.NewTextValue);
+        //}
+
 
         //private void PantrySearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
         //{
         //    string keyword = PantrySearchBar.Text;
-        //    IEnumerable<object> result = PantryList.Where(x => x.Equals(keyword)); //add ToLower() case sensitive
+        //    var result = PantryList.Where(x => x.Name.Contains(keyword)); //add ToLower() case sensitive
 
         //    Pantry_List_View.ItemsSource = result;
         //}

@@ -13,6 +13,7 @@
                        TextChanged="PantrySearchBar_OnTextChanged"
                        Margin="0,60,0,0" />-->
 
+            <!--TextChanged="PantrySearchBar_OnTextChanged"-->
             <SearchBar x:Name="PantrySearchBar"
                        TextChanged="PantrySearchBar_OnTextChanged"
                        SearchCommand="{Binding SearchCommand}"
