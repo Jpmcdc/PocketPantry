@@ -13,16 +13,13 @@ namespace Pocket_Pantry
     public partial class Pantry_Page : ContentPage
     {
 
-        //private IEnumerable<object> PantryList;
-
         public ObservableCollection<Pantry_PocketModel> PantryList { get; set; }
-        //public IEnumerable<string> Name { get; set; }
 
         public Pantry_Page()
         {
             InitializeComponent();
 
-            ObservableCollection<Pantry_PocketModel> PantryList = new ObservableCollection<Pantry_PocketModel>
+            PantryList = new ObservableCollection<Pantry_PocketModel>
             {
                 new Pantry_PocketModel
                 {
@@ -49,20 +46,54 @@ namespace Pocket_Pantry
             Pantry_List_View.ItemsSource = PantryList;
         }
 
+        private void PantryList_OnItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            try
+            {
+                var PantryList = Pantry_List_View.SelectedItem as string;
+
+                DisplayAlert("Item Tapped", "This ingredient was tapped: " + PantryList, "OK");
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void PantrySearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            var keyword = PantrySearchBar.Text;
+            var result = PantryList.Where(x => x.Name.Contains(keyword));
+
+            Pantry_List_View.ItemsSource = result;
+        }
+
         /*
          * TODO: These are four ways to get the search bar going
          */
 
-        public void PantrySearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
-        {
-            string keyword = PantrySearchBar.Text;
-            var result = PantryList.Where(x => x.Name.Contains(keyword));
+        //public void PantrySearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
+        //{
+        //    //string keyword = PantrySearchBar.Text;
+        //    //var result = PantryList.Where(x => x.Name.Contains(keyword));
 
-            if (string.IsNullOrWhiteSpace(e.NewTextValue))
-                Pantry_List_View.ItemsSource = result;
-            else Pantry_List_View.ItemsSource = result.Where(x => x.Name.Contains(e.NewTextValue));
-        }
+        //    Pantry_List_View.BeginRefresh();
 
+        //    if (string.IsNullOrWhiteSpace(e.NewTextValue))
+        //        Pantry_List_View.ItemsSource = PantryList;
+        //    else Pantry_List_View.ItemsSource = PantryList.Where(x => x.Name.Contains(e.NewTextValue));
+
+        //    Pantry_List_View.EndRefresh();
+        //}
+
+        //void PantryList_OnRefreshing(System.Object sender, System.EventArgs e)
+        //{
+        //}
+
+
+        /*
+         * Second Searchbar Attempt
+         */
         //public ICommand SearchCommand => new Command(() =>
         //{
         //    string keyword = PantrySearchBar.Text;
@@ -73,12 +104,18 @@ namespace Pocket_Pantry
 
         //});
 
+        /*
+         * Third Searchbar Attempt
+         */
+
         //private void PantrySearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
         //{
         //    ((SearchBar)sender).SearchCommand?.Execute(e.NewTextValue);
         //}
 
-
+        /*
+         * Fourth Searchbar Attempt
+         */
         //private void PantrySearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
         //{
         //    string keyword = PantrySearchBar.Text;

@@ -13,22 +13,26 @@
                        TextChanged="PantrySearchBar_OnTextChanged"
                        Margin="0,60,0,0" />-->
 
-            <!--TextChanged="PantrySearchBar_OnTextChanged"-->
+            <!-- SearchCommand="{Binding SearchCommand}"
+                 SearchCommandParameter="{Binding Text, Source={x:Reference PantrySearchBar}}"-->
             <SearchBar x:Name="PantrySearchBar"
                        TextChanged="PantrySearchBar_OnTextChanged"
-                       SearchCommand="{Binding SearchCommand}"
-                       SearchCommandParameter="{Binding Text, Source={x:Reference PantrySearchBar}}"
                        Margin="0,60,0,0">
-        
             </SearchBar>
 
-            <!-- TODO: Make a new event handler to add recipes -->
+            <!-- TODO: Make a new event handler to add ingredients -->
             <Button x:Name="AddNewIngredient" Text="New Ingredient" HorizontalOptions="CenterAndExpand"
-                    BorderColor="LightGray" CornerRadius="20" BorderWidth="1" Padding="18,10,18,10" Margin="225,10,0,0" />
+                    BorderColor="LightGray" CornerRadius="20"
+                    BorderWidth="1" Padding="18,10,18,10" Margin="225,10,0,0" />
 
+            <!--
+                
+            IsPullToRefreshEnabled="True"
+                      Refreshing="PantryList_OnRefreshing"-->
             <ListView x:Name="Pantry_List_View"
-                      ItemsSource="{Binding PantryList}">
-                <!--ItemTapped="PantryList_OnItemTapped"-->
+                      ItemsSource="{Binding PantryList}"
+                      ItemTapped="PantryList_OnItemTapped"
+                      >
                 
                 <ListView.ItemTemplate>
                     <DataTemplate>

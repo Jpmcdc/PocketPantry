@@ -11,7 +11,9 @@
 
             <!-- TODO: Fix Search Bar -->
             <SearchBar x:Name="PantrySearchBar"
-                       Margin="0,60,0,0" />
+                       TextChanged="PantrySearchBar_OnTextChanged"
+                       Margin="0,60,0,0">
+            </SearchBar>
 
             <!-- TODO: Make the event handler to add recipes -->
             <Button x:Name="AddRecipe" Text="New Recipe" HorizontalOptions="CenterAndExpand"

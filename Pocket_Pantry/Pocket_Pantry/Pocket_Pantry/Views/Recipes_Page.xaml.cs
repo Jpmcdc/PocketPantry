@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Pocket_Pantry.ViewModels;
 
 using Xamarin.Forms;
@@ -11,12 +12,14 @@ namespace Pocket_Pantry {
          *  The purpose of this list is to store all the Recipes the user has saved
          *  This list will populate the Recipies_List_View in the xaml
          */
+       
         public IList<Recipe> Recipes_List { get; private set; }
 
 
         public Recipes_Page()
         {
             InitializeComponent();
+
             BindingContext = new RecipeViewModel();
         }
 
