@@ -12,7 +12,7 @@ namespace Pocket_Pantry {
          *  The purpose of this list is to store all the Recipes the user has saved
          *  This list will populate the Recipies_List_View in the xaml
          */
-       
+        public static string DatabaseLocation = string.Empty;
         public IList<Recipe> Recipes_List { get; private set; }
 
 
@@ -21,6 +21,15 @@ namespace Pocket_Pantry {
             InitializeComponent();
 
             BindingContext = new RecipeViewModel();
+        }
+
+        public Recipes_Page(string databaseLocation)
+        {
+            InitializeComponent();
+
+            BindingContext = new RecipeViewModel();
+            DatabaseLocation = databaseLocation;
+          
         }
 
 
