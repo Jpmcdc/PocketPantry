@@ -9,9 +9,8 @@
 
         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
 
-            <!-- TODO: Fix Search Bar -->
-<!--TextChanged="PantrySearchBar_OnTextChanged"-->
-            <SearchBar x:Name="PantrySearchBar"
+            <SearchBar x:Name="RecipeSearchBar"
+                       TextChanged="RecipeSearchBar_OnTextChanged"
                        Margin="0,60,0,0">
             </SearchBar>
 

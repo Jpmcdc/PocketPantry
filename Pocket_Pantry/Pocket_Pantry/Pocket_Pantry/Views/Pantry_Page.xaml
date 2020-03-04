@@ -8,13 +8,6 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <!-- TODO: Fix Search Bar -->
-            <!--<SearchBar x:Name="PantrySearchBar"
-                       TextChanged="PantrySearchBar_OnTextChanged"
-                       Margin="0,60,0,0" />-->
-
-            <!-- SearchCommand="{Binding SearchCommand}"
-                 SearchCommandParameter="{Binding Text, Source={x:Reference PantrySearchBar}}"-->
             <SearchBar x:Name="PantrySearchBar"
                        TextChanged="PantrySearchBar_OnTextChanged"
                        Margin="0,60,0,0">
@@ -25,10 +18,7 @@
                     BorderColor="LightGray" CornerRadius="20"
                     BorderWidth="1" Padding="18,10,18,10" Margin="225,10,0,0" />
 
-            <!--
-                
-            IsPullToRefreshEnabled="True"
-                      Refreshing="PantryList_OnRefreshing"-->
+
             <ListView x:Name="Pantry_List_View"
                       ItemsSource="{Binding PantryList}"
                       ItemTapped="PantryList_OnItemTapped"

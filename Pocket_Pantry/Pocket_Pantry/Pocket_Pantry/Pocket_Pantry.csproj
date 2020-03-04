@@ -29,6 +29,7 @@
   <ItemGroup>
     <EmbeddedResource Remove="Pantry_PageDetail.xaml" />
     <EmbeddedResource Remove="Recipes_Page.xaml" />
+    <EmbeddedResource Remove="Recipes_Page.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\App.xaml.cs">
