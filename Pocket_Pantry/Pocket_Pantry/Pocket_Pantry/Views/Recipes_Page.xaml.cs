@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Pocket_Pantry.ViewModels;
@@ -16,12 +16,22 @@ namespace Pocket_Pantry
          */
         public ObservableCollection<Recipe> Recipes_List { get; private set; }
 
+        public static string DatabaseLocation = string.Empty;
 
         public Recipes_Page()
         {
             InitializeComponent();
 
             BindingContext = new RecipeViewModel();
+        }
+
+        public Recipes_Page(string databaseLocation)
+        {
+            InitializeComponent();
+
+            BindingContext = new RecipeViewModel();
+            DatabaseLocation = databaseLocation;
+          
         }
 
 

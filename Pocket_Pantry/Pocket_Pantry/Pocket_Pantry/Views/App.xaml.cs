@@ -8,7 +8,7 @@ namespace Pocket_Pantry
 {
     public partial class App : Application
     {
-        public App()
+        public App(string fullPath)
         {
             InitializeComponent();
 
