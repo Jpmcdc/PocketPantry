@@ -10,12 +10,22 @@ namespace Pocket_Pantry
     public partial class Pantry_Page : ContentPage
     {
 
+        /**
+         *  The purpose of this list is to store all the Ingredients
+         *  This list will populate the Pantry_List_View in the xaml
+         */
         public ObservableCollection<Pantry_PocketModel> PantryList { get; set; }
 
+        /**
+         *  Pantry_Page Constructor
+         */
         public Pantry_Page()
         {
             InitializeComponent();
 
+            /**
+            *  TODO: This Observable Collection is being "hard" populated but we need to pull the information from the database
+            */
             PantryList = new ObservableCollection<Pantry_PocketModel>
             {
                 new Pantry_PocketModel
@@ -43,6 +53,12 @@ namespace Pocket_Pantry
             Pantry_List_View.ItemsSource = PantryList;
         }
 
+        /**
+        *  Handles when item in the list is selected
+        *   Opens an alert that displays the information
+        *
+        *   TODO: Figure out what really do when item selected on Pantry
+        */
         private void PantryList_OnItemTapped(object sender, ItemTappedEventArgs e)
         {
             try
@@ -57,6 +73,9 @@ namespace Pocket_Pantry
             }
         }
 
+        /**
+         *  SearchBar Code
+         */
         private void PantrySearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
         {
             var keyword = PantrySearchBar.Text;

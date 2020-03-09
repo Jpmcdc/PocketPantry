@@ -16,8 +16,14 @@ namespace Pocket_Pantry
          */
         public ObservableCollection<Recipe> Recipes_List { get; private set; }
 
+        /*
+        *   TODO: Add comment here
+        */
         public static string DatabaseLocation = string.Empty;
 
+        /*
+        *   Recipes_Page Constructor
+        */
         public Recipes_Page()
         {
             InitializeComponent();
@@ -25,6 +31,10 @@ namespace Pocket_Pantry
             BindingContext = new RecipeViewModel();
         }
 
+        /*
+        *   TODO: Add comment here
+        *   FIXME: Not working yet
+        */
         public Recipes_Page(string databaseLocation)
         {
             InitializeComponent();
@@ -34,13 +44,20 @@ namespace Pocket_Pantry
           
         }
 
-
+        /*
+        *   Handles when item in the list is selected
+        *   Opens a new navigation page with the recipe information
+        */
         private async void ListView_ItemTapped(Object sender, ItemTappedEventArgs e)
         {
             var mydetails = e.Item as Recipe;
             await Navigation.PushModalAsync(new View_Recipe(mydetails.title, mydetails.type));
         }
 
+        /*
+        *   Handles "add recipe" button click
+        *   Opens a new navigation page with entry points for new recipe
+        */
         private async void AddRecipe_Clicked(System.Object sender, System.EventArgs e)
         {
             await Navigation.PushModalAsync(new New_Recipe());
@@ -53,13 +70,10 @@ namespace Pocket_Pantry
         private void RecipeSearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
         {
             var keyword = RecipeSearchBar.Text;
-
             var result = Recipes_List.Where(x => x.title.Contains(keyword));
 
-            if (result != null)
-            {
-                Recipes_List_View.ItemsSource = result;
-            }
+            Recipes_List_View.ItemsSource = result;
+           
         }
 
     }

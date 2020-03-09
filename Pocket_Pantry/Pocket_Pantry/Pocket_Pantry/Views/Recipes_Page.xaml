@@ -9,16 +9,18 @@
 
         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
 
+            <!-- SerchBar -->
             <SearchBar x:Name="RecipeSearchBar"
                        TextChanged="RecipeSearchBar_OnTextChanged"
                        Margin="0,60,0,0">
             </SearchBar>
 
-            <!-- TODO: Make the event handler to add recipes -->
+            <!-- Add Recipe Button -->
             <Button x:Name="AddRecipe" Text="New Recipe" HorizontalOptions="CenterAndExpand"
                     Clicked="AddRecipe_Clicked"
                     BorderColor="LightGray" BorderWidth="1" CornerRadius="20" Padding="18,10,18,10" Margin="250,10,0,0" />
 
+            <!-- This is the Front-End list that shows information to the user -->
             <ListView x:Name="Recipes_List_View"
                       ItemsSource="{Binding Recipe_List}"
                       ItemTapped="ListView_ItemTapped">                      
@@ -27,6 +29,7 @@
                     <DataTemplate>
                         <ViewCell>
 
+                            <!-- This binds the information form the back end Observable Collection to the front end ListView -->
                             <Label Text="{Binding title}"
                                    Margin="20, 20, 0, 0"/>
                            

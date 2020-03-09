@@ -11,16 +11,24 @@ namespace Pocket_Pantry
     public partial class New_Recipe : ContentPage
     {
 
+        /**
+         *  This list will hold all the recipes
+         */
         public IList<Recipe> Recipes_List { get; private set; }
 
+        /**
+         *  New_Recipe Constructor
+         */
         public New_Recipe()
         {
             InitializeComponent();
             BindingContext = new RecipeViewModel();
         }
 
-
-
+        /**
+         *  Handles "Back" button
+         *  Navigates to the previous page
+         */
         async void cancel_btn(System.Object sender, System.EventArgs e)
         {
             await Navigation.PopModalAsync();

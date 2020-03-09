@@ -5,6 +5,9 @@
     <ContentPage.Content>
         <StackLayout Margin="0, 40, 0, 0">
 
+            <!-- The following three labels are there to spearate the difrent fields of a recipe -->
+
+            <!-- Title -->
             <Label Text="Recipe Title"
                    Margin="20, 20, 0, 0" />
             <Entry x:Name="Entry_Title"
@@ -12,6 +15,7 @@
                    ClearButtonVisibility="WhileEditing"
                    />
 
+            <!-- Ingredients -->
             <Label Text="Ingredients"
                    Margin="20, 20, 0, 0" />
             <Entry x:Name="Entry_Ingredients"
@@ -19,6 +23,7 @@
                    ClearButtonVisibility="WhileEditing"
                     />
 
+            <!-- Directions -->
             <Label Text="Directions"
                    Margin="20, 20, 0, 0" />
             <Entry x:Name="Entry_Directions"
@@ -33,7 +38,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <!-- TODO: Make this btn work -->
+                <!-- Save Button -->
                 <Button Text="Save"
                         HorizontalOptions="CenterAndExpand"
                         BorderColor="LightGray" BorderWidth="1" CornerRadius="20" Padding="38, 0, 38, 0"
@@ -41,6 +46,7 @@
                         Clicked="Save_Clicked"
                          />
 
+                <!-- Cancel Button -->
                 <Button Grid.Column="1"
                         Text="Cancel"
                         HorizontalOptions="CenterAndExpand"
