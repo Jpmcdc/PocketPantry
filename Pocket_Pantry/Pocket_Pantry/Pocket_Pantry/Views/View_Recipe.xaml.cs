@@ -47,7 +47,10 @@ namespace Pocket_Pantry
                 int rows = conn.Update(mydetails);
 
                 if (rows > 0)
+                {
                     DisplayAlert("Success", "Experience succesfully updated", "Ok");
+                    Navigation.PopModalAsync();
+                }
                 else
                     DisplayAlert("Failure", "Experience failed to be updated", "Ok");
             }
@@ -62,7 +65,10 @@ namespace Pocket_Pantry
                     int rows = conn.Delete(mydetails);
 
                     if (rows > 0)
-                        DisplayAlert("Success", "Experience succesfully deleted", "Ok");
+                    {
+                        DisplayAlert("Success", "Experience succesfully updated", "Ok");
+                        Navigation.PopModalAsync();
+                    }
                     else
                         DisplayAlert("Failure", "Experience failed to be deleted", "Ok");
                 }
