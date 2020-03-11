@@ -8,6 +8,7 @@ namespace Pocket_Pantry
 {
     public partial class App : Application
     {
+        //Database path is DatabaseLocation
         public static string DatabaseLocation = string.Empty;
         public App()
         {
@@ -22,7 +23,7 @@ namespace Pocket_Pantry
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
-
+            // Set databaseLocaion in the path for DatabaseLocation
             DatabaseLocation = databaseLocation;
         }
 
