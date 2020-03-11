@@ -16,6 +16,7 @@
             <!-- TODO: Make a new event handler to add ingredients -->
             <Button x:Name="AddNewIngredient" Text="New Ingredient" HorizontalOptions="CenterAndExpand"
                     BorderColor="LightGray" CornerRadius="20"
+                    Clicked="AddIngredient_Clicked"
                     BorderWidth="1" Padding="18,10,18,10" Margin="225,10,0,0" />
 
 
