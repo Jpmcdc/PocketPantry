@@ -37,7 +37,7 @@ namespace Pocket_Pantry
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
                 conn.CreateTable<Recipe>();
-                var recipes = conn.Table<Recipe>().ToList();
+                var recipes = conn.Table<Recipe>().ToList(); 
                 Recipes_List_View.ItemsSource = recipes;
 
 
