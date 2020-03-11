@@ -12,6 +12,7 @@ namespace Pocket_Pantry
 
     public partial class View_Recipe : ContentPage
     {
+       // Set mydetials with Recipe Type
         Recipe mydetails;
 
         /**
@@ -20,8 +21,11 @@ namespace Pocket_Pantry
         public View_Recipe(Recipe mydetails)
         {
             InitializeComponent();
+
+            //Use mydetails from selected Items
             this.mydetails = mydetails;
 
+            //Set details from mydetails to View_Recipe
             View_Title.Text = mydetails.title;
             View_Ingredients.Text = mydetails.ingredients;
             View_Directions.Text = mydetails.directions;
@@ -36,6 +40,8 @@ namespace Pocket_Pantry
             await Navigation.PopModalAsync();
         }
 
+
+        //Update information to Datbase
         void updateButton_Clicked(object sender, EventArgs e)
         {
             mydetails.title = View_Title.Text;
@@ -56,6 +62,7 @@ namespace Pocket_Pantry
             }
         }
 
+        //Delete the information in Database "mydetails"
         private void deleteButton_Clicked(object sender, EventArgs e)
         {
             {
