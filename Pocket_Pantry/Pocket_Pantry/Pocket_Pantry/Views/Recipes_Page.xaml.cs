@@ -2,12 +2,14 @@ using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Pocket_Pantry.ViewModels;
+using SQLite;
 using Xamarin.Forms;
-
-
+using Xamarin.Forms.Xaml;
 
 namespace Pocket_Pantry
 {
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Recipes_Page : ContentPage {
 
         /**
@@ -16,10 +18,7 @@ namespace Pocket_Pantry
          */
         public ObservableCollection<Recipe> Recipes_List { get; private set; }
 
-        /*
-        *   TODO: Add comment here
-        */
-        public static string DatabaseLocation = string.Empty;
+
 
         /*
         *   Recipes_Page Constructor
@@ -31,18 +30,17 @@ namespace Pocket_Pantry
             BindingContext = new RecipeViewModel();
         }
 
-        /*
-        *   TODO: Add comment here
-        *   FIXME: Not working yet
-        */
-        public Recipes_Page(string databaseLocation)
+        protected override void OnAppearing()
         {
-            InitializeComponent();
+            base.OnAppearing();
 
-            BindingContext = new RecipeViewModel();
-            DatabaseLocation = databaseLocation;
-          
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                conn.CreateTable<Recipe>();
+                var recipes = conn.Table<Recipe>().ToList();
+            }
         }
+
 
         /*
         *   Handles when item in the list is selected

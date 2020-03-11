@@ -8,13 +8,24 @@ namespace Pocket_Pantry
 {
     public partial class App : Application
     {
-        public App(string fullPath)
+        public static string DatabaseLocation = string.Empty;
+        public App()
         {
             InitializeComponent();
 
             MainPage = new MainPage();
             //MainPage = new NavigationPage(new Pantry_Page());
         }
+
+        public App(string databaseLocation)
+        {
+            InitializeComponent();
+
+            MainPage = new NavigationPage(new MainPage());
+
+            DatabaseLocation = databaseLocation;
+        }
+
 
         protected override void OnStart()
         {

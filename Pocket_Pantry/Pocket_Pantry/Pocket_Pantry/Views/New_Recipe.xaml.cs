@@ -5,9 +5,12 @@ using Pocket_Pantry.Models;
 
 using Xamarin.Forms;
 using SQLite;
+using Xamarin.Forms.Xaml;
 
 namespace Pocket_Pantry
+     
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class New_Recipe : ContentPage
     {
 
@@ -45,7 +48,7 @@ namespace Pocket_Pantry
                // newRecipe.type = Entry_Type.Text;
             };
 
-            SQLiteConnection conn = new SQLiteConnection(Recipes_Page.DatabaseLocation);
+            SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation);
             conn.CreateTable<Recipe>();
             int rows = conn.Insert(newRecipe);
             conn.Close();
