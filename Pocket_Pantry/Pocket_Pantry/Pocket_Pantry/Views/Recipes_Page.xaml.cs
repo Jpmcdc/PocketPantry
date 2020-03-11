@@ -38,6 +38,9 @@ namespace Pocket_Pantry
             {
                 conn.CreateTable<Recipe>();
                 var recipes = conn.Table<Recipe>().ToList();
+                Recipes_List_View.ItemsSource = recipes;
+
+
             }
         }
 
@@ -48,8 +51,15 @@ namespace Pocket_Pantry
         */
         private async void ListView_ItemTapped(Object sender, ItemTappedEventArgs e)
         {
-            var mydetails = e.Item as Recipe;
-            await Navigation.PushModalAsync(new View_Recipe(mydetails.title, mydetails.type));
+            var mydetails = Recipes_List_View.SelectedItem as Recipe;
+            if (mydetails != null) 
+            {
+                Navigation.PushModalAsync(new View_Recipe(mydetails));
+            }
+
+
+            //  var mydetails = e.Item as Recipe;
+            //  await Navigation.PushModalAsync(new View_Recipe(mydetails.title, mydetails.type));
         }
 
         /*

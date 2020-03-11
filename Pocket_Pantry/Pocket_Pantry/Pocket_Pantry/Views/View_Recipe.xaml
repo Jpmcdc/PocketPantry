@@ -11,21 +11,21 @@
             <!-- Title -->
             <Label Text="Recipe Title"
                    Margin="20, 20, 0, 0" />
-            <Label x:Name="View_Title"
+            <Entry x:Name="View_Title"
                    Margin="20, 0, 0, 0"
                    Text="..."/>
 
             <!-- Ingredients -->
             <Label Text="Ingredients"
                    Margin="20, 20, 0, 0" />
-            <Label x:Name="View_Ingredients"
+            <Entry x:Name="View_Ingredients"
                    Margin="20, 0, 0, 0"
                    Text="..." />
 
             <!-- Directions -->
             <Label Text="Directions"
                    Margin="20, 20, 0, 0" />
-            <Label x:Name="View_Directions"
+            <Entry x:Name="View_Directions"
                    Margin="20, 0, 0, 0"
                    Text="..." />
 
@@ -41,8 +41,17 @@
                         HorizontalOptions="CenterAndExpand"
                         BorderColor="LightGray" BorderWidth="1" CornerRadius="20" Padding="38, 0, 38, 0"
                         Margin="60, 30, 0, 0"
+                        x:Name="updateButton"
+                        Clicked="updateButton_Clicked"
                          />
 
+                <Button Text="Delete"
+                        HorizontalOptions="CenterAndExpand"
+                        BorderColor="LightGray" BorderWidth="1" CornerRadius="20" Padding="38, 0, 38, 0"
+                        Margin="60, 30, 0, 0"
+                        x:Name="deleteButton"
+                        Clicked="deleteButton_Clicked"
+                         />
                 <Button Grid.Column="1"
                         Text="Back"
                         HorizontalOptions="CenterAndExpand"

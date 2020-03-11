@@ -22,7 +22,7 @@
 
             <!-- This is the Front-End list that shows information to the user -->
             <ListView x:Name="Recipes_List_View"
-                      ItemsSource="{Binding Recipe_List}"
+                  
                       ItemTapped="ListView_ItemTapped">                      
 
                 <ListView.ItemTemplate>
