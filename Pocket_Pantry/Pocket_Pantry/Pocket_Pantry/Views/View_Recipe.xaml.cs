@@ -42,17 +42,18 @@ namespace Pocket_Pantry
             mydetails.ingredients = View_Ingredients.Text;
             mydetails.directions = View_Directions.Text;
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+
             {
                 conn.CreateTable<Recipe>();
                 int rows = conn.Update(mydetails);
 
                 if (rows > 0)
                 {
-                    DisplayAlert("Success", "Experience succesfully updated", "Ok");
+                    DisplayAlert("Success", "You succesfully updated the Recipe", "Ok");
                     Navigation.PopModalAsync();
                 }
                 else
-                    DisplayAlert("Failure", "Experience failed to be updated", "Ok");
+                    DisplayAlert("Failure", "Update failed", "Ok");
             }
         }
 

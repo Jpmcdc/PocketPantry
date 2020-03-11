@@ -37,7 +37,7 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- Save Changes -->
-                <Button Text="Save Changes"
+                <Button Text="Update"
                         HorizontalOptions="CenterAndExpand"
                         BorderColor="LightGray" BorderWidth="1" CornerRadius="20" Padding="38, 0, 38, 0"
                         Margin="60, 30, 0, 0"
