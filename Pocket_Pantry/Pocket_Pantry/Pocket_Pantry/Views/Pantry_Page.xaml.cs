@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using System;
+using Pocket_Pantry.Views;
 
 namespace Pocket_Pantry
 {
@@ -82,6 +83,15 @@ namespace Pocket_Pantry
             var result = PantryList.Where(x => x.Name.Contains(keyword));
 
             Pantry_List_View.ItemsSource = result;
+        }
+
+        /*
+        *   Handles "add Ingredient" button click
+        *   Opens a new navigation page with entry points for new ingredient
+        */
+        private async void AddIngredient_Clicked(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new New_Ingredient());
         }
     }
 }

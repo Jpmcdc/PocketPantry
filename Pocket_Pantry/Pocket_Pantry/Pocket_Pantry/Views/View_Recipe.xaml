@@ -12,21 +12,21 @@
             <Label Text="Recipe Title"
                    Margin="20, 20, 0, 0" />
             <Entry x:Name="View_Title"
-                   Margin="20, 0, 0, 0"
+                   Margin="20, 0, 20, 0"
                    Text="..."/>
 
             <!-- Ingredients -->
             <Label Text="Ingredients"
                    Margin="20, 20, 0, 0" />
             <Entry x:Name="View_Ingredients"
-                   Margin="20, 0, 0, 0"
+                   Margin="20, 0, 20, 0"
                    Text="..." />
 
             <!-- Directions -->
             <Label Text="Directions"
                    Margin="20, 20, 0, 0" />
             <Entry x:Name="View_Directions"
-                   Margin="20, 0, 0, 0"
+                   Margin="20, 0, 20, 0"
                    Text="..." />
 
             <!-- This Grid helps to hold the 2 instances of the btns horizontally laid out -->
@@ -36,8 +36,8 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <!-- TODO: Make this btn work -->
-                <Button Text="Edit"
+                <!-- Save Changes -->
+                <Button Text="Save Changes"
                         HorizontalOptions="CenterAndExpand"
                         BorderColor="LightGray" BorderWidth="1" CornerRadius="20" Padding="38, 0, 38, 0"
                         Margin="60, 30, 0, 0"
@@ -45,21 +45,25 @@
                         Clicked="updateButton_Clicked"
                          />
 
-                <Button Text="Delete"
-                        HorizontalOptions="CenterAndExpand"
-                        BorderColor="LightGray" BorderWidth="1" CornerRadius="20" Padding="38, 0, 38, 0"
-                        Margin="60, 30, 0, 0"
-                        x:Name="deleteButton"
-                        Clicked="deleteButton_Clicked"
-                         />
+                <!-- Delete Recipe -->
                 <Button Grid.Column="1"
-                        Text="Back"
+                        Text="Delete"
                         HorizontalOptions="CenterAndExpand"
-                        BorderColor="LightGray" BorderWidth="1" CornerRadius="20" Padding="38, 0, 38, 0"
+                        TextColor="DarkRed" BorderColor="DarkRed"
+                        BorderWidth="1" CornerRadius="20" Padding="38, 0, 38, 0"
                         Margin="0, 30, 60, 0"
-                        Clicked="View_Recipe_Back"
+                        Clicked="deleteButton_Clicked"
                         />
             </Grid>
+
+            <!-- Go Back -->
+            <Button Text="Back"
+                    HorizontalOptions="Center"
+                    BorderColor="LightGray" BorderWidth="1" CornerRadius="20" Padding="100, 0, 100, 0" Margin="0, 10, 0, 0"
+                    x:Name="deleteButton"
+                    Clicked="View_Recipe_Back"
+                    />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

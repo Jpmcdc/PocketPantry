@@ -54,12 +54,8 @@ namespace Pocket_Pantry
             var mydetails = Recipes_List_View.SelectedItem as Recipe;
             if (mydetails != null) 
             {
-                Navigation.PushModalAsync(new View_Recipe(mydetails));
+                await Navigation.PushModalAsync(new View_Recipe(mydetails));
             }
-
-
-            //  var mydetails = e.Item as Recipe;
-            //  await Navigation.PushModalAsync(new View_Recipe(mydetails.title, mydetails.type));
         }
 
         /*
