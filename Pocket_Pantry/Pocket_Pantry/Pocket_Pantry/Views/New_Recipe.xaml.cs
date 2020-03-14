@@ -51,8 +51,8 @@ namespace Pocket_Pantry
                 newRecipe.title = Entry_Title.Text;
                 newRecipe.ingredients = Entry_Ingredients.Text;
                 newRecipe.directions = Entry_Directions.Text;
-               // newRecipe.type = Entry_Type.Text;
             };
+
             //connection to the datbase & saving information
             SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation);
             conn.CreateTable<Recipe>();
@@ -61,21 +61,12 @@ namespace Pocket_Pantry
 
             if (rows > 0)
             {
-                _ = DisplayAlert("Success: ", "Recipe succesfully inserter", "OK");
+                //_ = DisplayAlert("Success: ", "Recipe succesfully inserter", "OK");
                 await Navigation.PopModalAsync();
             }
             else
-                _ = DisplayAlert("Failure: ", "Recipe failed to be inserter", "OK");
-
-            //Recipe newRecipe = new Recipe();
-
-            // newRecipe.title = Entry_Title.Text;
-            //newRecipe.ingredients = Entry_Ingredients.Text;
-            // newRecipe.directions = Entry_Directions.Text;
-
-            //Recipes_List.Add(newRecipe);
-
-            //await Navigation.PopModalAsync();
+                //_ = DisplayAlert("Failure: ", "Recipe failed to be inserter", "OK");
+                await Navigation.PopModalAsync();
         }
 
         /*
