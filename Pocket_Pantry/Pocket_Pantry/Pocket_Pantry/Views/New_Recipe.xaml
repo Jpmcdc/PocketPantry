@@ -20,6 +20,7 @@
                         Margin="23, 40, 0, 0" FontSize="18"/>
 
                     <Button Grid.Column="1"
+                        Clicked="Scan_Title_Clicked"
                         Text="Scan"
                         HorizontalOptions="EndAndExpand"
                         BorderColor="LightGray" BorderWidth="1" CornerRadius="20" Padding="20, 0, 20, 0" FontSize="12"
