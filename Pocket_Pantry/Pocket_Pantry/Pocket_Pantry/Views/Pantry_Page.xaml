@@ -28,11 +28,11 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid Padding="1" RowSpacing="10" ColumnSpacing="20">
+                            <Grid Padding="1" RowSpacing="30" ColumnSpacing="20">
 
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="20"/>
-                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
                                 </Grid.RowDefinitions>
 
                                 <Grid.ColumnDefinitions>

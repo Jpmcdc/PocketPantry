@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using System;
 using Pocket_Pantry.Views;
+using SQLite;
 
 namespace Pocket_Pantry
 {
@@ -15,7 +16,7 @@ namespace Pocket_Pantry
          *  The purpose of this list is to store all the Ingredients
          *  This list will populate the Pantry_List_View in the xaml
          */
-        public ObservableCollection<Pantry_PocketModel> PantryList { get; set; }
+        public ObservableCollection<Pantry_PocketModel> PantryList { get; private set; }
 
         /**
          *  Pantry_Page Constructor
@@ -23,25 +24,13 @@ namespace Pocket_Pantry
         public Pantry_Page()
         {
             InitializeComponent();
-
+         
             /**
             *  TODO: This Observable Collection is being "hard" populated but we need to pull the information from the database
             */
             PantryList = new ObservableCollection<Pantry_PocketModel>
             {
-                new Pantry_PocketModel
-                {
-                    Name = "Carrot",
-                    Image = "veggie.png",
-                    Category = "Veggie",
-                },
-
-                new Pantry_PocketModel
-                {
-                    Name = "Zuchinni",
-                    Image = "veggie.png",
-                    Category = "Veggie",
-                },
+ 
 
                 new Pantry_PocketModel
                 {
@@ -51,7 +40,20 @@ namespace Pocket_Pantry
                 }
             };
 
-            Pantry_List_View.ItemsSource = PantryList;
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                conn.CreateTable<Pantry_PocketModel>();
+                var ingredient = conn.Table<Pantry_PocketModel>().ToList();
+                Pantry_List_View.ItemsSource = ingredient;
+
+
+            }
         }
 
         /**
@@ -60,19 +62,30 @@ namespace Pocket_Pantry
         *
         *   TODO: Figure out what really do when item selected on Pantry
         */
+
         private void PantryList_OnItemTapped(object sender, ItemTappedEventArgs e)
+         {
+             try
+             {
+                 var PantryList = Pantry_List_View.SelectedItem as string;
+
+                 DisplayAlert("Item Tapped", "This ingredient was tapped: " + PantryList, "OK");
+             }
+             catch (Exception)
+             {
+
+             }
+         }
+         /*
+        private async void PantryList_OnItemTapped(Object sender, ItemTappedEventArgs e)
         {
-            try
+            var mydetails = Pantry_List_View.SelectedItem as Recipe;
+            if (mydetails != null)
             {
-                var PantryList = Pantry_List_View.SelectedItem as string;
-
-                DisplayAlert("Item Tapped", "This ingredient was tapped: " + PantryList, "OK");
-            }
-            catch (Exception)
-            {
-
+                await Navigation.PushModalAsync(new View_Recipe(mydetails));
             }
         }
+        */
 
         /**
          *  SearchBar Code

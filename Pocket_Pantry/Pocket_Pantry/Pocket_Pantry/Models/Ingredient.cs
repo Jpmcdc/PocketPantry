@@ -1,6 +1,8 @@
 ﻿using System;
-namespace Pocket_Pantry {
-    public class Ingredient {
+namespace Pocket_Pantry
+{
+    public class Ingredient
+    {
 
         // variables that every ingredient will have
         public String name { get; set; }
@@ -11,7 +13,8 @@ namespace Pocket_Pantry {
 
         public string ImageUrl { get; set; }
 
-        public string getName() {
+        public string getName()
+        {
             return name;
         }
     }

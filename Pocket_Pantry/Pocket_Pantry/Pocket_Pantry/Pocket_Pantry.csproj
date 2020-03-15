@@ -16,6 +16,8 @@
     <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Remove="Models\Class1.cs" />
+    <Compile Remove="Models\Ingredients_Class.cs" />
     <Compile Remove="Recipes_Page.cs" />
     <Compile Remove="EmptyClass.cs" />
     <Compile Remove="Pantry_PageDetail.xaml.cs" />
