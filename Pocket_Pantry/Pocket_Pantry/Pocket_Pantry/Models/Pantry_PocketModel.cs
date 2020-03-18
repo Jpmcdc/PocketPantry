@@ -24,7 +24,7 @@ namespace Pocket_Pantry.Models
 
         public string getName()
         {
-            return Ingredients;
+            return ingredient_name;
         }
             //IEnumerable<Pantry_PocketModel> Pantry_PocketModels;
 

@@ -33,7 +33,7 @@ namespace Pocket_Pantry.Views
             // add the new recipe using Recipe
             Pantry_PocketModel newIngredient = new Pantry_PocketModel();
             {
-                newIngredient.Ingredients = Entry_Ingredients.Text;
+                newIngredient.ingredient_name = Entry_Ingredients.Text;
                 newIngredient.Category = Entry_Category.Text;
             };
 
