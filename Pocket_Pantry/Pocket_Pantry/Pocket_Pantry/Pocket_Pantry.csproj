@@ -25,6 +25,7 @@
     <Compile Remove="TextChangedBehavior.cs" />
     <Compile Remove="Pantry_Page.TextChangedBehavior.cs" />
     <Compile Remove="Models\Ingredient.cs" />
+    <Compile Remove="Views\ListView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />

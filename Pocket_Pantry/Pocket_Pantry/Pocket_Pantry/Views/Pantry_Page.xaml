@@ -6,62 +6,31 @@
     <!-- Can change title of tab or icon image ^ -->
 
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
 
+            <!-- SerchBar -->
             <SearchBar x:Name="PantrySearchBar"
                        TextChanged="PantrySearchBar_OnTextChanged"
                        Margin="0,60,0,0">
             </SearchBar>
 
-            <!-- TODO: Make a new event handler to add ingredients -->
+            <!-- Add ingredients -->
             <Button x:Name="AddNewIngredient" Text="New Ingredient" HorizontalOptions="CenterAndExpand"
                     BorderColor="LightGray" CornerRadius="20"
                     Clicked="AddIngredient_Clicked"
                     BorderWidth="1" Padding="18,10,18,10" Margin="225,10,0,0" />
 
-
+            <!-- This is the Front-End list that shows information to the user -->
             <ListView x:Name="Pantry_List_View"
-                      ItemsSource="{Binding PantryList}"
-                      ItemTapped="PantryList_OnItemTapped"
-                      >
+                      ItemTapped="PantryList_OnItemTapped">
                 
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid Padding="1" RowSpacing="30" ColumnSpacing="20">
+      
+                                <Label Text="{Binding ingredient_name}"
+                                       Padding="20,20,0,0" />
 
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="30"/>
-                                    <RowDefinition Height="30"/>
-                                </Grid.RowDefinitions>
-
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-
-                                <Image
-
-                                    HeightRequest="30"
-                                    HorizontalOptions="CenterAndExpand"
-                                    VerticalOptions="CenterAndExpand"
-                                    Aspect="AspectFill"
-                                    WidthRequest="30"
-                                    Grid.RowSpan="2"
-                                    Source="{Binding Image}"/>
-
-                                <Label Grid.Column="1"
-                                       Text="{Binding Name}"
-                                       VerticalOptions="End"
-                                       Padding="0,20,0,20" />
-
-                                <!-- TODO: DELETE -->
-                                <Label Grid.Column="1"
-                                       Grid.Row="1"
-                                       Text="{Binding Category}"
-                                       VerticalOptions="Start"
-                                       Padding="10,10,10,10" />
-                            </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

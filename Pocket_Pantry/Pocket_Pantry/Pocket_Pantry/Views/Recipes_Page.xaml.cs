@@ -12,22 +12,13 @@ namespace Pocket_Pantry
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Recipes_Page : ContentPage {
 
-        /**
-         *  The purpose of this list is to store all the Recipes the user has saved
-         *  This list will populate the Recipies_List_View in the xaml
-         */
-        public ObservableCollection<Recipe> Recipes_List { get; private set; }
-
-
 
         /*
-        *   Recipes_Page Constructor
-        */
+         *   Recipes_Page Constructor
+         */
         public Recipes_Page()
         {
             InitializeComponent();
-
-            BindingContext = new RecipeViewModel();
         }
 
         protected override void OnAppearing()
@@ -39,8 +30,6 @@ namespace Pocket_Pantry
                 conn.CreateTable<Recipe>();
                 var recipes = conn.Table<Recipe>().ToList(); 
                 Recipes_List_View.ItemsSource = recipes;
-
-
             }
         }
 
@@ -70,14 +59,11 @@ namespace Pocket_Pantry
 
         /**
          *  SearchBar Code
+         *  FIXME
          */
         private void RecipeSearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
         {
             var keyword = RecipeSearchBar.Text;
-            var result = Recipes_List.Where(x => x.title.Contains(keyword));
-
-            Recipes_List_View.ItemsSource = result;
-           
         }
 
     }

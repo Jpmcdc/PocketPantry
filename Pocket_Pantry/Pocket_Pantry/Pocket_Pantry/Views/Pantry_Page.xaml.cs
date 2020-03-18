@@ -5,41 +5,22 @@ using Xamarin.Forms;
 using System;
 using Pocket_Pantry.Views;
 using SQLite;
+using Xamarin.Forms.Xaml;
+using Pocket_Pantry.ViewModels;
 
 namespace Pocket_Pantry
 {
 
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Pantry_Page : ContentPage
     {
 
-        /**
-         *  The purpose of this list is to store all the Ingredients
-         *  This list will populate the Pantry_List_View in the xaml
-         */
-        public ObservableCollection<Pantry_PocketModel> PantryList { get; private set; }
-
-        /**
+        /*
          *  Pantry_Page Constructor
          */
         public Pantry_Page()
         {
             InitializeComponent();
-         
-            /**
-            *  TODO: This Observable Collection is being "hard" populated but we need to pull the information from the database
-            */
-            PantryList = new ObservableCollection<Pantry_PocketModel>
-            {
- 
-
-                new Pantry_PocketModel
-                {
-                    Name = "Tomato",
-                    Image = "veggie.png",
-                    Category = "Veggie",
-                }
-            };
-
         }
 
         protected override void OnAppearing()
@@ -49,10 +30,8 @@ namespace Pocket_Pantry
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
                 conn.CreateTable<Pantry_PocketModel>();
-                var ingredient = conn.Table<Pantry_PocketModel>().ToList();
-                Pantry_List_View.ItemsSource = ingredient;
-
-
+                var ingredients = conn.Table<Pantry_PocketModel>().ToList();
+                Pantry_List_View.ItemsSource = ingredients;
             }
         }
 
@@ -62,7 +41,6 @@ namespace Pocket_Pantry
         *
         *   TODO: Figure out what really do when item selected on Pantry
         */
-
         private void PantryList_OnItemTapped(object sender, ItemTappedEventArgs e)
          {
              try
@@ -76,26 +54,17 @@ namespace Pocket_Pantry
 
              }
          }
-         /*
-        private async void PantryList_OnItemTapped(Object sender, ItemTappedEventArgs e)
-        {
-            var mydetails = Pantry_List_View.SelectedItem as Recipe;
-            if (mydetails != null)
-            {
-                await Navigation.PushModalAsync(new View_Recipe(mydetails));
-            }
-        }
-        */
 
         /**
          *  SearchBar Code
+         *  FIXME
          */
         private void PantrySearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
         {
             var keyword = PantrySearchBar.Text;
-            var result = PantryList.Where(x => x.Name.Contains(keyword));
+            //var result = PantryList.Where(x => x.Name.Contains(keyword));
 
-            Pantry_List_View.ItemsSource = result;
+            //Pantry_List_View.ItemsSource = result;
         }
 
         /*
