@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout Margin="0, 40, 0, 0">
 
-            <!-- The following three labels are there to spearate the difrent fields of a recipe -->
+            <!-- The following three labels are there to spearate the different fields of a recipe -->
 
             <!-- This Grid helps to hold the Input tag and scan button horizontally -->
 
